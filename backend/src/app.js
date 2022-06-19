@@ -14,6 +14,8 @@ app.use(() => {
   throw createHttpError(404, "Route not found");
 });
 
+app.use(morgan('dev'))
+
 app.use(errorHandler);
 
 mongoose

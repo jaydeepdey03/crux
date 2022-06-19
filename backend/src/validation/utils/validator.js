@@ -2,11 +2,7 @@ import createHttpError from "http-errors";
 import { NextFunction } from "express";
 import Joi from "joi";
 
-const validator = async (
-  schemaName: Joi.ObjectSchema,
-  body: object,
-  next: NextFunction
-) => {
+const validator = async () => {
   const value = await schemaName.validate(body);
 
   try {

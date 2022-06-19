@@ -1,5 +1,5 @@
 import { Router } from "express";
-import { getExample, getExampleData } from "../controllers/exampleControllers";
+import { getExample, getExampleData } from '../controllers';
 import { getExampleDataValidation } from "../validation/exampleValidation/exampleValidation";
 
 const router = Router();

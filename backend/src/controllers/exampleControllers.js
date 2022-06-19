@@ -1,12 +1,11 @@
-import { RequestHandler } from "express";
 import createHttpError from "http-errors";
 import Example from "../model/User";
 
-export const getExample: RequestHandler = (req, res, next) => {
+export const getExample = (req, res, next) => {
   res.json({ message: "hello" });
 };
-export const getExampleData: RequestHandler = async (req, res, next) => {
-  const { name, id }: IExampleData = req.body;
+export const getExampleData = async (req, res, next) => {
+  const { name, id } = req.body;
 
   try {
     const example = await Example.findOne({ name });
